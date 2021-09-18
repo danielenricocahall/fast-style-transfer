@@ -26,7 +26,6 @@ def net(data_path, input_image):
 
     data = scipy.io.loadmat(data_path)
     mean = data['normalization'][0][0][0]
-    mean_pixel = np.mean(mean, axis=(0, 1))
     weights = data['layers'][0]
 
     net = {}
